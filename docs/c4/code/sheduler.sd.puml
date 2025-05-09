@@ -1,0 +1,22 @@
+@startuml
+    actor       client             as client
+    participant web_app            as web_app
+    participant api_gateway        as api_gateway
+    participant house_monitoring   as house_monitoring
+    participant house_managment    as house_managment
+    queue       house_event_broker as house_event_broker
+    participant command_executor   as command_executor
+    participant device             as device
+
+    client -> web_app : Включение \nустройства
+    web_app -> api_gateway : Перенаправление запроса
+    api_gateway -> house_managment : Перенаправление запроса
+    house_managment -> house_event_broker : Добавление \nзапроса в очередъ
+    house_event_broker -> command_executor : Обработка \nзапроса из очереди
+    command_executor -> device : Отправка запроса \nна выполнение устройству
+    device -> command_executor : Результат выполнения
+    command_executor -> house_event_broker : Добавление события\nс результатом выполнения запроса
+    house_event_broker -> house_monitoring : Фиксация изменений в системе мониторинга
+    house_event_broker -> house_managment : Фиксация изменений в системе управления
+    house_monitoring -> client : Отправка результатов пользователю
+@enduml

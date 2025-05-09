@@ -1,0 +1,27 @@
+@startuml (id=smart_device)
+    !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+    
+    System_Ext(smart_device, "Умное устройство")
+@enduml
+
+@startuml (id=rele)
+    !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+    
+    System_Ext(rele, "Реле")
+@enduml
+
+@startuml (id=sensor)
+    !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+    
+    System_Ext(sensor, "Специальные датчики")
+@enduml
+
+@startuml (id=heater)
+    !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+    
+    System_Ext(heater, "Устройство отопления")
+@enduml
+
+
+
+
