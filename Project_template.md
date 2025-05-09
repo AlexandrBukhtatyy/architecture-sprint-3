@@ -85,7 +85,7 @@
 
 **Диаграмма компонентов (Components)**
 
-![Container Diagram: House managment](./docs/c4/_images/house-managment.png "Container Diagram: House managment")
+![Container Diagram: House managment](./docs/c4/_images/house-managment.cd.png "Container Diagram: House managment")
 
 **Диаграмма кода (Code)**
 

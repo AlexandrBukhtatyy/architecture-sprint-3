@@ -30,7 +30,7 @@
 
 @startuml (id=house_event_broker)
   !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
-  Container(house_event_broker, "Брокер сообщений", "Apache Kafka", "Хранение событий системы")
+  ContainerQueue(house_event_broker, "Брокер сообщений", "Apache Kafka", "Хранение событий системы")
 @enduml
 
 @startuml (id=command_executor)
